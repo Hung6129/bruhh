@@ -10,6 +10,12 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
+  List images = [
+    "midodrine-hydrochloride.jpg",
+    "isotretinoin.jpeg",
+    "depakote.jpg",
+    "asacol-hd.jpg",
+  ];
   @override
   Widget build(BuildContext context) {
     TabController _tabController = TabController(
@@ -85,16 +91,20 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
             child: TabBarView(
               children: [
                 ListView.builder(
-                  itemCount: 10,
+                  itemCount: images.length,
                   scrollDirection: Axis.horizontal,
                   itemBuilder: (BuildContext context, int index) {
                     return Container(
                       margin: EdgeInsets.only(right: 20, top: 10),
-                      width: 200,
+                      width: 300,
                       height: 300,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(20),
                         gradient: Palette.wellComeScreen,
+                        image: DecorationImage(
+                          image: AssetImage("img" + images[index]),
+                          fit: BoxFit.cover,
+                        ),
                       ),
                     );
                   },
@@ -107,64 +117,64 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
           SizedBox(
             height: 30,
           ),
-          Container(
-            margin: EdgeInsets.only(left: 20, right: 20),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                AppText(
-                  text: "Khám phá thêm",
-                  color: Palette.textNo,
-                  size: 18,
-                  fontWeight: FontWeight.w400,
-                ),
-                AppText(
-                  text: ">>>",
-                  color: Palette.p5,
-                  size: 18,
-                  fontWeight: FontWeight.w300,
-                ),
-              ],
-            ),
-          ),
-          SizedBox(
-            height: 10,
-          ),
-          Container(
-            width: double.maxFinite,
-            height: 100,
-            margin: EdgeInsets.only(
-              left: 20,
-            ),
-            child: ListView.builder(
-                scrollDirection: Axis.horizontal,
-                itemCount: 4,
-                itemBuilder: (_, index) {
-                  return Container(
-                    margin: EdgeInsets.only(right: 20),
-                    child: Column(
-                      children: [
-                        Container(
-                          width: 80,
-                          height: 80,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(20),
-                            color: Palette.p2,
-                          ),
-                        ),
-                        Container(
-                          child: AppText(
-                            text: 'So sánh',
-                            fontWeight: FontWeight.w400,
-                            color: Palette.textNo,
-                            size: 15,
-                          ),
-                        )
-                      ],
-                    ),
-                  );
-                }),
-          ),
+          // Container(
+          //   margin: EdgeInsets.only(left: 20, right: 20),
+          //   child: Row(
+          //     mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          //     children: [
+          //       AppText(
+          //         text: "Khám phá thêm",
+          //         color: Palette.textNo,
+          //         size: 18,
+          //         fontWeight: FontWeight.w400,
+          //       ),
+          //       AppText(
+          //         text: ">>>",
+          //         color: Palette.p5,
+          //         size: 18,
+          //         fontWeight: FontWeight.w300,
+          //       ),
+          //     ],
+          //   ),
+          // ),
+          // SizedBox(
+          //   height: 10,
+          // ),
+          // Container(
+          //   width: double.maxFinite,
+          //   height: 100,
+          //   margin: EdgeInsets.only(
+          //     left: 20,
+          //   ),
+          //   child: ListView.builder(
+          //       scrollDirection: Axis.horizontal,
+          //       itemCount: 4,
+          //       itemBuilder: (_, index) {
+          //         return Container(
+          //           margin: EdgeInsets.only(right: 20),
+          //           child: Column(
+          //             children: [
+          //               Container(
+          //                 width: 80,
+          //                 height: 80,
+          //                 decoration: BoxDecoration(
+          //                   borderRadius: BorderRadius.circular(20),
+          //                   color: Palette.p2,
+          //                 ),
+          //               ),
+          //               Container(
+          //                 child: AppText(
+          //                   text: 'So sánh',
+          //                   fontWeight: FontWeight.w400,
+          //                   color: Palette.textNo,
+          //                   size: 15,
+          //                 ),
+          //               )
+          //             ],
+          //           ),
+          //         );
+          //       }),
+          // ),
         ],
       ),
     );

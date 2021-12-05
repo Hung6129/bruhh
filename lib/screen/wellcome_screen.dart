@@ -39,20 +39,23 @@ class _WellcomeScreenState extends State<WellcomeScreen> {
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        AppText(
-                          text: "THUỐC ME",
-                          color: Palette.textNo,
-                          size: 30,
-                          fontWeight: FontWeight.w300,
-                        ),
-                        AppText(
-                          text: "Chào mừng bạn đến với Thuốc Me",
-                          color: Palette.textNo,
-                          size: 15,
-                          fontWeight: FontWeight.w300,
+                        // AppText(
+                        //   text: "THUỐC ME",
+                        //   color: Palette.textNo,
+                        //   size: 40,
+                        //   fontWeight: FontWeight.w400,
+                        // ),
+                        Container(
+                          width: 250,
+                          child: AppText(
+                            text: "Chào mừng bạn đến với Thuốc Me",
+                            color: Palette.textNo,
+                            size: 25,
+                            fontWeight: FontWeight.w400,
+                          ),
                         ),
                         SizedBox(
-                          height: 20,
+                          height: 10,
                         ),
                         Container(
                           margin: EdgeInsets.only(top: 20),
@@ -60,9 +63,9 @@ class _WellcomeScreenState extends State<WellcomeScreen> {
                           child: AppText(
                             text:
                                 "Thông tin thuốc cho người dùng, khi mới bắt đầu dùng thuốc và giúp người dùng tìm hiểu thêm về thông tin thuốc mà họ đang dùng hoặc sắp dùng",
-                            color: Palette.textNo,
-                            fontWeight: FontWeight.w100,
-                            size: 15,
+                            color: Palette.textNo.withOpacity(0.5),
+                            fontWeight: FontWeight.w400,
+                            size: 20,
                           ),
                         ),
                       ],
@@ -76,8 +79,8 @@ class _WellcomeScreenState extends State<WellcomeScreen> {
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(8),
                             color: index == indexDots
-                                ? Palette.mainColor
-                                : Palette.mainColor.withOpacity(0.5),
+                                ? Palette.p5
+                                : Palette.p5.withOpacity(0.5),
                           ),
                         );
                       }),

@@ -1,6 +1,5 @@
 import 'package:bruhh/cubit/app_cubits.dart';
 import 'package:bruhh/cubit/app_state.dart';
-import 'package:bruhh/screen/detail_screen.dart';
 import 'package:bruhh/screen/navscreen/main_screen.dart';
 import 'package:bruhh/screen/screens.dart';
 import 'package:flutter/material.dart';
@@ -20,10 +19,10 @@ class _AppCubitsLogicState extends State<AppCubitsLogic> {
       body: BlocBuilder<AppCubits, CubitStates>(
         builder: (context, state) {
           if (state is WellcomeState) {
-            return WellcomeScreen();
+            return MainScreen();
           } else {
             return Container();
-          }
+          } 
         },
       ),
     );
