@@ -26,7 +26,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
               children: [
                 Icon(
                   Icons.menu,
-                  size: 30,
+                  size: 40,
                   color: Palette.p5,
                 ),
                 Expanded(child: Container()),
@@ -85,7 +85,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
             child: TabBarView(
               children: [
                 ListView.builder(
-                  itemCount: 8,
+                  itemCount: 10,
                   scrollDirection: Axis.horizontal,
                   itemBuilder: (BuildContext context, int index) {
                     return Container(
@@ -94,7 +94,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                       height: 300,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(20),
-                        color: Palette.p2,
+                        gradient: Palette.wellComeScreen,
                       ),
                     );
                   },

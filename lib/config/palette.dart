@@ -12,4 +12,18 @@ class Palette {
   static const Color textNo = Color(0xFF000000);
   static const Color textTil = Color(0xFF142F43);
   static const Color starRating = Color(0xFFF3950D);
+  static const Color online = Color(0xFF4BCB1F);
+
+  // gradient color
+  static const LinearGradient wellComeScreen = LinearGradient(
+    begin: Alignment.topLeft,
+    end: Alignment.bottomRight,
+    colors: [Palette.p5, Palette.p1],
+  );
+
+  static const LinearGradient gradientPattren = LinearGradient(
+    begin: Alignment.topCenter,
+    end: Alignment.bottomCenter,
+    colors: [Colors.transparent, Colors.black26],
+  );
 }

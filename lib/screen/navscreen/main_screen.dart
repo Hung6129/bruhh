@@ -35,9 +35,9 @@ class _MainScreenState extends State<MainScreen> {
         unselectedFontSize: 0,
         selectedFontSize: 0,
         type: BottomNavigationBarType.fixed,
-        backgroundColor: Palette.p8,
-        selectedItemColor: Palette.p5,
-        unselectedItemColor: Palette.p5.withOpacity(0.5),
+        backgroundColor: Palette.p5,
+        selectedItemColor: Palette.p1,
+        unselectedItemColor: Palette.p1.withOpacity(0.3),
         showSelectedLabels: false,
         showUnselectedLabels: false,
         items: [

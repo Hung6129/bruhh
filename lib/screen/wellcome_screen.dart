@@ -41,7 +41,7 @@ class _WellcomeScreenState extends State<WellcomeScreen> {
                       children: [
                         AppText(
                           text: "THUỐC ME",
-                          color: Palette.textTil,
+                          color: Palette.textNo,
                           size: 30,
                           fontWeight: FontWeight.w300,
                         ),
