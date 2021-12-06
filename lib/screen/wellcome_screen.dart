@@ -1,6 +1,9 @@
 import 'package:bruhh/config/palette.dart';
+import 'package:bruhh/cubit/app_cubits.dart';
 import 'package:bruhh/widget/app_text.dart';
+import 'package:bruhh/widget/responsive_btn.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class WellcomeScreen extends StatefulWidget {
   const WellcomeScreen({Key? key}) : super(key: key);
@@ -66,6 +69,25 @@ class _WellcomeScreenState extends State<WellcomeScreen> {
                             color: Palette.textNo.withOpacity(0.5),
                             fontWeight: FontWeight.w400,
                             size: 20,
+                          ),
+                        ),
+                        SizedBox(
+                          height: 20,
+                        ),
+                        GestureDetector(
+                          onTap: () {
+                            BlocProvider.of<AppCubits>(context).getData(); 
+                          },
+                          child: Container(
+                            width: 200,
+                            child: Row(
+                              children: [
+                                ResponsiveButton(
+                                  color: Palette.p5,
+                                  width: 100,
+                                ),
+                              ],
+                            ),
                           ),
                         ),
                       ],
