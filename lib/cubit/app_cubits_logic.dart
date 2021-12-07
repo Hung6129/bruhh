@@ -1,5 +1,6 @@
 import 'package:bruhh/cubit/app_cubits.dart';
 import 'package:bruhh/cubit/app_state.dart';
+import 'package:bruhh/screen/navscreen/main_screen.dart';
 import 'package:bruhh/screen/screens.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -20,7 +21,7 @@ class _AppCubitsLogicState extends State<AppCubitsLogic> {
           return WellcomeScreen();
         }
         if (state is LoadedState) {
-          return HomeScreen();
+          return MainScreen();
         }
         if (state is LoadingState) {
           return Center(

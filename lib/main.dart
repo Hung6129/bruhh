@@ -1,6 +1,5 @@
 import 'package:bruhh/cubit/app_cubits.dart';
 import 'package:bruhh/cubit/app_cubits_logic.dart';
-import 'package:bruhh/screen/navscreen/nav_screen.dart';
 import 'package:bruhh/service/service_data.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -17,7 +16,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
+      title: 'Flutter Demo Cubit',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),

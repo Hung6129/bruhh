@@ -118,7 +118,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                           );
                         },
                       ),
-                      Text("data")
+                      Text("")
                     ],
                     controller: _tabController,
                   ),
